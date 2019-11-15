@@ -1,27 +1,25 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import App from './components/App';
-// import { AppContainer } from 'react-hot-loader';
-// import { HashRouter } from 'react-router-dom';
+import React from 'react';
+import Header from './Header';
+import KegMenu from './KegMenu';
+import AddKeg from './AddKeg';
+import { Switch, Route } from 'react-router-dom';
 
 
-// const render = (Component) => {
-//   ReactDOM.render(
-//     <AppContainer>
-//       <HashRouter>
-//         <Component />
-//       </HashRouter>
-//     </AppContainer>,
-//     document.getElementById('react-app-root')
-//   );
-// };
+const backgroundStyling = {
+  backgroundColor: '#801b1b'
+};
+function App() {
+  return (
+    <div style={backgroundStyling}>
+      <Header />
+      <Image />
+      <Switch>
+        <Route exact path='/' component={KegMenu} />
+        <Route path='/addkeg' component={AddKeg} />
+      </Switch>
 
-// render(App);
+    </div>
+  );
+}
 
-// /*eslint-disable */
-// if (module.hot) {
-//   module.hot.accept('./components/App', () => {
-//     render(App);
-//   });
-// }
-// /*eslint-enable */
+export default App;
