@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 function Keg(props) {
   return (
     <div>
-      <h2>{props.name} - {props.brand}</h2>
-      <h3>{props.variety} - {props.location}</h3>
+      <h2>{props.name} ({props.variety})</h2>
+      <h3>{props.brand} - {props.location}</h3>
       <h3>{props.price} - <em>{props.abv}</em></h3>
       <hr/>
     </div>
   );
 }
-Ticket.propTypes = {
+Keg.propTypes = {
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,

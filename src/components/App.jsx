@@ -5,14 +5,11 @@ import AddKeg from './AddKeg';
 import { Switch, Route } from 'react-router-dom';
 
 
-const backgroundStyling = {
-  backgroundColor: '#801b1b'
-};
+
 function App() {
   return (
-    <div style={backgroundStyling}>
+    <div>
       <Header />
-      <Image />
       <Switch>
         <Route exact path='/' component={KegMenu} />
         <Route path='/addkeg' component={AddKeg} />
