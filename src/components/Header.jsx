@@ -8,17 +8,23 @@ const headerStyling = {
 };
 
 const link1Styling = {
-  color: 'gold'
-}
+  color: 'gold',
+};
 const link2Styling = {
   color: 'orange'
-}
+};
+// const employeeHeaderStyling = {
+//   float: 'right',
+//   color: 'white'
+// };
 function Header() {
   return (
     <div style={headerStyling}>
-      <h1>Rad Midwestern Beers</h1>
+      <h1>Rad Midwestern Craft Beer Hall</h1>
+      <hr/>
       <div>
-        <Link to='/' style={link1Styling}>Beers on Tap</Link> | <Link to='/AddKeg' style={link2Styling}>Employee Add Keg</Link>
+        <Link to='/TapList' style={link1Styling}>Beers on Tap</Link>  
+        <Link to='/EmployeeHome' style={link2Styling}>Employee Menu</Link>
       </div>
     </div>
   );

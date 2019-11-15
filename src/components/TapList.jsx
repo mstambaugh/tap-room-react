@@ -20,7 +20,7 @@ var masterKegMenu = [
   }
 ];
 
-function KegMenu() {
+function TapList() {
   return (
     <div>
       <hr />
@@ -37,4 +37,4 @@ function KegMenu() {
   );
 }
 
-export default KegMenu;
+export default TapList;

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Header';
-import KegMenu from './KegMenu';
-import AddKeg from './AddKeg';
+import Home from './Home';
+import TapList from './TapList';
+import EmployeeHome from './EmployeeHome';
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -11,8 +12,9 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={KegMenu} />
-        <Route path='/addkeg' component={AddKeg} />
+        <Route exact path='/' component={Home} />
+        <Route path='/employeehome' component={EmployeeHome} />
+        <Route path= '/taplist' component={TapList} />
       </Switch>
 
     </div>
