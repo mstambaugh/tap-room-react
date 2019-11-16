@@ -23,6 +23,8 @@ var masterKegList = [
 function TapList() {
   return (
     <div>
+      <h2>I don't have a drinking problem 'Cept when I can't get a drink.</h2>
+      <h3>~~~Tom Waits</h3>
       <hr />
       {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
