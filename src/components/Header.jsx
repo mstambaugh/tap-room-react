@@ -3,41 +3,52 @@ import { Link } from 'react-router-dom';
 import wallpaper from '../assets/images/wallpaper.jpg';
 
 const fullHeaderStyling = {
-  paddingBottom: '20px',
+  paddingBottom: '40px',
   position: 'relative',
   display: 'inline block',
   width: '100%',
-  marginBottom: '10px'
+  marginBottom: '40px',
 };
 const headerStyling = {
   position: 'absolute',
-  zIndex: '999',
   margin: '0 auto',
   left: '0',
   right: '0',
   top: '2%',
   textAlign: 'center',
   fontSize: '40px',
-  color: 'white',
+  color: '#ebeae8',
   fontFamily: 'impact'
  
 };
 const headerWallpaperStyling = {
   width: '100%',
+  zIndex: '-1'
 };
 
 const link1Styling = {
-  color: 'gold',
+  color: '#5e463d',
   float: 'left',
   fontSize: '25px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  marginLeft: '40px',
+  marginTop: '5px',
+  padding: '5px',
+  border: '5px ridge #967062',
+  textDecoration: 'none'
+  
   
 };
 const link2Styling = {
-  color: 'gold',
+  color: '#5e463d',
   float: 'right',
   fontSize: '25px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  marginRight: '40px',
+  marginTop: '5px',
+  padding: '5px',
+  border: '5px ridge #967062',
+  textDecoration: 'none'
 };
 
 function Header() {

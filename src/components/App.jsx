@@ -5,11 +5,13 @@ import TapList from './TapList';
 import EmployeeHome from './EmployeeHome';
 import { Switch, Route } from 'react-router-dom';
 
-
+const pageBackground = {
+  backgroundColor: '#ebeae8',
+};
 
 function App() {
   return (
-    <div>
+    <div style={pageBackground}>
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />

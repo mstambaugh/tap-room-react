@@ -1,13 +1,13 @@
 import React from 'react';
 
 const QuoteStyles = {
-  color: '#6F1A07',
-  border: '10px inset #B3B6B7',
+  color: '#093b14',
+  border: '10px inset #3a5741',
   padding: '10px', 
 };
 
 const TomWaitsStyles = {
-  color: '#2B2118', 
+  color: '#093b14', 
   textAlign: 'right'
 };
 function EmployeeHome() {
