@@ -7,7 +7,7 @@ const BioStyles = {
 function Home() {
   return (
     <div>
-      <h2>The world is a hellish place, and bad writing is destroying the quality of our suffering</h2>
+      <h2>The world is a hellish place, and bad writing is destroying the quality of our suffering.</h2>
       <h3>~~~Tom Waits</h3>
       <hr />
       <div>
