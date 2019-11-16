@@ -1,7 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 
-var masterKegMenu = [
+var masterKegList = [
   {
     name: 'Two Hearted Ale',
     brand: 'Bell\'s Brewery',
@@ -24,7 +24,7 @@ function TapList() {
   return (
     <div>
       <hr />
-      {masterKegMenu.map((keg, index) =>
+      {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
           brand={keg.brand}
           location={keg.location}

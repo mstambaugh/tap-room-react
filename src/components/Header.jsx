@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const headerStyling = {
-  backgroundColor: '#801b1b',
-  color: 'white',
+  backgroundColor: 'F7F3E3',
+  color: '6F1A07',
   textAlign: 'center'
 };
 
