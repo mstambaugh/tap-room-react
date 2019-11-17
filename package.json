@@ -21,10 +21,11 @@
   "homepage": "https://github.com/epicodus-lessons/react-help-queue-example#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
+    "react": "^15.6.2",
     "react-css-modules": "^4.7.11",
-    "react-dom": "^15.5.4",
-    "react-router-dom": "^4.0.0"
+    "react-dom": "^15.6.2",
+    "react-router-dom": "^4.0.0",
+    "reactstrap": "^8.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

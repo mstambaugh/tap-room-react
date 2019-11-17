@@ -20,7 +20,7 @@ function EmployeeHome() {
         
 
       </div>
-      <hr />
+
       <div>
       </div>
     </div>
