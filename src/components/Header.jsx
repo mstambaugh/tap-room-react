@@ -1,99 +1,84 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import wallpaper from '../assets/images/wallpaper.jpg';
-import { Container, Row, Col } from 'reactstrap';
+// import styled from 'styled-components';
 
 const fullHeaderStyling = {
-  borderBottom: '4px solid #254a34',
-  paddingBottom: '10px',
+  borderBottom: '20px double #254a34',
   position: 'relative',
   display: 'inline block',
   width: '100%',
-  marginBottom: '40px',
+  marginBottom: '100px',
+  paddingBottom: '15px'
 };
 const headerStyling = {
   position: 'absolute',
   margin: '0 auto',
   left: '0',
   right: '0',
-  top: '8%',
+  top: '2%',
   textAlign: 'center',
   fontSize: '50px',
-  color: '#ebeae8',
-  fontFamily: 'impact',
+  color: '#6d8776',
+  fontFamily: 'Arial',
 };
 const headerWallpaperStyling = {
   width: '100%',
   zIndex: '-1',
-  paddingBottom: '6px'
+  paddingBottom: '10px'
 };
 
 const link1Styling = {
-  color: '#5e463d',
-  textAlign: 'right',
-  width: '33%%',
+  color: '#c9be83',
   fontSize: '25px',
   fontWeight: 'bold',
   position: 'relative',
-  marginLeft: '30px',
-  marginRight: '30px,',
-  padding: '2px',
-  border: '5px ridge #967062',
-  textDecoration: 'none'
-  
+  marginLeft: '50px',
+  marginRight: '50px',
+  padding: '3px',
+  border: '4px inset #c9be83',
+  textDecoration: 'none',
+  fontFamily: 'Arial',
   
 };
 const link2Styling = {
-  color: '#5e463d',
-  textAlign: 'right',
-  width: '33%',
+  color: '#81909c',
   top: '10%',
   fontSize: '25px',
   fontWeight: 'bold',
   position: 'relative',
-  marginLeft: '20px',
-  marginRight: '20px,',
-  padding: '2px',
-  border: '5px ridge #967062',
-  textDecoration: 'none'
+  marginRight: '50px',
+  padding: '3px',
+  border: '5px inset #81909c',
+  textDecoration: 'none',
+  fontFamily: 'Arial'
 };
 const link3Styling = {
-  color: '#5e463d',
+  color: '#dead9b',
   fontSize: '25px',
-  textAlign: 'left',
-  width: '33%',
   top: '10%',
   fontWeight: 'bold',
   position: 'relative',
-  padding: '2px',
-  marginLeft: '30px',
-  marginRight: '30px,',
-  border: '5px ridge #967062',
-  textDecoration: 'none'
+  padding: '3px',
+  marginRight: '50px',
+  border: '5px inset #cc8f78',
+  textDecoration: 'none',
+  fontFamily: 'Arial'
 };
 
 function Header() {
   return (
-    <Container>
-      <Row>
-        <div style={fullHeaderStyling}>
-          <img src={wallpaper} style={headerWallpaperStyling}></img>
-          <div style={headerStyling}>
-            <h1>MIDBEST BEER</h1>
-          </div>
-        </div>
-        <Col sm='4'>
-          <Link to='/TapList' style={link1Styling}>Beers on Tap</Link>  
-        </Col>
-        <Col sm='4'>
-          <Link to='/EmployeeHome' style={link2Styling}>Employee Menu</Link>
-        </Col>  
-        <Col sm='4'>
-          <Link to='/' style={link3Styling}>Home</Link>
-        </Col>  
-      </Row>
-    </Container >
-    
+    <div style={fullHeaderStyling}>
+      <img src={wallpaper} style={headerWallpaperStyling}></img>
+      <div style={headerStyling}>
+        <h1>MIDBEST BEER</h1>
+      </div>
+      <div>
+        <Link to='/' style={link1Styling}>Home</Link>
+        <Link to='/TapList' style={link2Styling}>Beers on Tap</Link>  
+        <Link to='/EmployeeHome' style={link3Styling}>Employee Menu</Link>
+      </div>
+    </div>
   );
 }
 

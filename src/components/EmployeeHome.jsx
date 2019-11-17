@@ -1,7 +1,7 @@
 import React from 'react';
 
 const QuoteStyles = {
-  color: '#093b14',
+  color: '#baccc1',
   border: '10px inset #3a5741',
   padding: '10px', 
 };
