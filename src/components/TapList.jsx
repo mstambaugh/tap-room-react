@@ -1,7 +1,21 @@
 import React from 'react';
 import Keg from './Keg';
 
+const QuoteStyles = {
+  color: '#8da686',
+  border: '10px inset #8da686',
+  padding: '30px',
+  margin: '50px',
+  fontStyle: 'italic',
+  fontSize: '30px'
 
+};
+const TomWaitsStyles = {
+  color: '#8da686',
+  textAlign: 'right',
+  paddingRight: '50px',
+  fontSize: '30px'
+};
 var masterKegList = [
   {
     name: 'Two Hearted Ale',
@@ -9,7 +23,8 @@ var masterKegList = [
     location: 'Kalamazoo, Michigan',
     variety: 'American IPA',
     price: '4.50',
-    abv: '7.0%'
+    abv: '7.0%',
+    pintsavailable: 46
   },
   {
     name: 'Porter',
@@ -17,25 +32,28 @@ var masterKegList = [
     location: 'Grand Rapids, Michigan',
     variety: 'Robust Porter',
     price: '5.00',
-    abv: '6.5%'
+    abv: '6.5%',
+    pintsavailable: 121
   }
 ];
 
 function TapList() {
   return (
     <div>
-      <h2>I don't have a drinking problem 'Cept when I can't get a drink.</h2>
-      <h3>~~~Tom Waits</h3>
-      <hr />
-      {masterKegList.map((keg, index) =>
-        <Keg name={keg.name}
-          brand={keg.brand}
-          location={keg.location}
-          variety={keg.variety}
-          price={keg.price}
-          abv={keg.abv}
-          key={index} />
-      )}
+      <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
+      <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
+      <h2>
+        {masterKegList.map((keg, index) =>
+          <Keg name={keg.name}
+            brand={keg.brand}
+            location={keg.location}
+            variety={keg.variety}
+            price={keg.price}
+            abv={keg.abv}
+            pintsavailable={keg.pintsavailable}
+            key={index} />
+        )}
+      </h2>
     </div>
   );
 }

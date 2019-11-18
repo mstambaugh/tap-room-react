@@ -6,8 +6,9 @@ import EmployeeHome from './EmployeeHome';
 import { Switch, Route } from 'react-router-dom';
 
 const pageBackground = {
-  backgroundColor: '#53695b',
+  backgroundColor: '#fce7d9',
 };
+
 
 function App() {
   return (

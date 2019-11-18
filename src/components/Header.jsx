@@ -4,7 +4,7 @@ import wallpaper from '../assets/images/wallpaper.jpg';
 // import styled from 'styled-components';
 
 const fullHeaderStyling = {
-  borderBottom: '20px double #254a34',
+  borderBottom: '20px double #8da686',
   position: 'relative',
   display: 'inline block',
   width: '100%',
@@ -19,7 +19,7 @@ const headerStyling = {
   top: '2%',
   textAlign: 'center',
   fontSize: '50px',
-  color: '#6d8776',
+  color: '#fce7d9',
   fontFamily: 'Arial',
 };
 const headerWallpaperStyling = {
@@ -33,8 +33,8 @@ const link1Styling = {
   fontSize: '25px',
   fontWeight: 'bold',
   position: 'relative',
-  marginLeft: '50px',
-  marginRight: '50px',
+  marginLeft: '70px',
+  marginRight: '70px',
   padding: '3px',
   border: '4px inset #c9be83',
   textDecoration: 'none',
@@ -47,7 +47,7 @@ const link2Styling = {
   fontSize: '25px',
   fontWeight: 'bold',
   position: 'relative',
-  marginRight: '50px',
+  marginRight: '70px',
   padding: '3px',
   border: '5px inset #81909c',
   textDecoration: 'none',

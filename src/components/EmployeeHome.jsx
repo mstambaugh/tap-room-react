@@ -4,14 +4,19 @@ import {masterKegList} from './TapList';
 import { Link } from 'react-router-dom';
 
 const QuoteStyles = {
-  color: '#baccc1',
-  border: '10px inset #3a5741',
-  padding: '10px', 
+  color: '#093b14',
+  border: '10px inset #8da686',
+  padding: '30px',
+  margin: '50px',
+  fontStyle: 'italic',
+  fontSize: '30px'
 };
 
 const TomWaitsStyles = {
-  color: '#093b14', 
-  textAlign: 'right'
+  color: '#8da686',
+  textAlign: 'right',
+  paddingRight: '50px',
+  fontSize: '30px'
 };
 const link3Styling = {
   color: '#dead9b',
@@ -25,17 +30,28 @@ const link3Styling = {
   textDecoration: 'none',
   fontFamily: 'Arial'
 };
+const TitleStyles = {
+  marginBottom: '20px',
+  color: '#8da686',
+  borderBottom: '5px inset #81909c',
+  fontSize: '40px'
+};
+const TapListStyles = {
+  margin: '30px',
+  paddingLeft: '75px',
+  paddingRight: '75px',
+  color: '#8da686'
+};
 
 function EmployeeHome() {
   return (
     <div>
       <div>
-        <h2 style={QuoteStyles}>A gentleman is someone who can play the accordion, but doesn't.</h2>
-        <h3 style={TomWaitsStyles}>~~~Tom Waits</h3>
-        <hr />
+        <h3 style={QuoteStyles}>A gentleman is someone who can play the accordion, but doesn't.</h3>
+        <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
       </div>
-      <div>
-        <h2>Kegs currently on Tap</h2>
+      <div style={TapListStyles}>
+        <h2 style={TitleStyles}>Kegs currently on Tap</h2>
         {masterKegList.map((keg, index) =>
           <Keg name={keg.name}
             brand={keg.brand}
@@ -45,14 +61,12 @@ function EmployeeHome() {
             abv={keg.abv}
             key={index} />
         )}
-      </div>
-      <div>
-        <h2>Almost tapped Out!</h2>   
+        <h2 style={TitleStyles}>Almost tapped Out!</h2>   
         <ul></ul>
       </div>
       <div>
-        <Link to='/AddKeg' style={link3Styling}>Add a new Keg to the Tap List</Link>
-        <Link to='/EditKeg' style={link3Styling}>Edit/Remove Kegs from the Tap List</Link>  
+        <Link to='/AddKeg' style={link3Styling}>Add a new Keg</Link> |
+        <Link to='/EditKeg' style={link3Styling}>Edit/Remove Kegs</Link>  
       </div>
     </div>
   );
