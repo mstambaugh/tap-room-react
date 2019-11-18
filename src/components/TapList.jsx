@@ -1,6 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 
+
 var masterKegList = [
   {
     name: 'Two Hearted Ale',
@@ -40,3 +41,4 @@ function TapList() {
 }
 
 export default TapList;
+export {masterKegList};

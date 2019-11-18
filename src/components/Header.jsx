@@ -25,7 +25,7 @@ const headerStyling = {
 const headerWallpaperStyling = {
   width: '100%',
   zIndex: '-1',
-  paddingBottom: '10px'
+  paddingBottom: '10px',
 };
 
 const link1Styling = {
@@ -76,7 +76,7 @@ function Header() {
       <div>
         <Link to='/' style={link1Styling}>Home</Link>
         <Link to='/TapList' style={link2Styling}>Beers on Tap</Link>  
-        <Link to='/EmployeeHome' style={link3Styling}>Employee Menu</Link>
+        <Link to='/EmployeeHome' style={link3Styling}>Employee Home</Link>
       </div>
     </div>
   );
