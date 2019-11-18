@@ -1,6 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 import {masterKegList} from './TapList';
+import { Link } from 'react-router-dom';
 
 const QuoteStyles = {
   color: '#baccc1',
@@ -12,24 +13,18 @@ const TomWaitsStyles = {
   color: '#093b14', 
   textAlign: 'right'
 };
-// const masterKegList = [
-//   {
-//     name: 'Two Hearted Ale',
-//     brand: 'Bell\'s Brewery',
-//     location: 'Kalamazoo, Michigan',
-//     variety: 'American IPA',
-//     price: '4.50',
-//     abv: '7.0%'
-//   },
-//   {
-//     name: 'Porter',
-//     brand: 'Founders Brewing Co.',
-//     location: 'Grand Rapids, Michigan',
-//     variety: 'Robust Porter',
-//     price: '5.00',
-//     abv: '6.5%'
-//   }
-// ];
+const link3Styling = {
+  color: '#dead9b',
+  fontSize: '25px',
+  top: '10%',
+  fontWeight: 'bold',
+  position: 'relative',
+  padding: '3px',
+  marginRight: '50px',
+  border: '5px inset #cc8f78',
+  textDecoration: 'none',
+  fontFamily: 'Arial'
+};
 
 function EmployeeHome() {
   return (
@@ -50,6 +45,14 @@ function EmployeeHome() {
             abv={keg.abv}
             key={index} />
         )}
+      </div>
+      <div>
+        <h2>Almost tapped Out!</h2>   
+        <ul></ul>
+      </div>
+      <div>
+        <Link to='/AddKeg' style={link3Styling}>Add a new Keg to the Tap List</Link>
+        <Link to='/EditKeg' style={link3Styling}>Edit/Remove Kegs from the Tap List</Link>  
       </div>
     </div>
   );
