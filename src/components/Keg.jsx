@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TapListBreakStyles = {
-  border: '3px dotted #8da686',
+const TapListBreakStyles1 = {
+  borderBottom: '5px dotted #c9ba32',
+  paddingTop: '40px',
+  marginTop: '10px',
+};
+const TapListBreakStyles2 = {
+  borderTop: '5px dotted #c9ba32',
+  marginBottom: '10px',
+  paddingBottom: '40px',
 };
 const TapListTextStyles = {
-  color: '#8da686'
+  color: '#fce7d9',
+  fontFamily: 'Arial',
+ 
 };
 function Keg(props) {
   return (
     <div>
+      <div style={TapListBreakStyles1}>
+      </div>
       <h2 style={TapListTextStyles}>{props.name} ({props.variety}),<em>{props.abv}</em></h2>
       <h3 style={TapListTextStyles}>{props.brand} of {props.location}</h3>
-      <h3 style={TapListTextStyles}>${props.price}: {props.pintsavailable}</h3>
-      <div style={TapListBreakStyles}>
+      <h3 style={TapListTextStyles}>${props.price}: {props.pintsleft}</h3>
+      <div style={TapListBreakStyles2}>
       </div>
     </div>
   );
@@ -25,7 +36,7 @@ Keg.propTypes = {
   variety: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
-  pintsavailable: PropTypes.int.isRequired
+  pintsleft: PropTypes.string.isRequired
 };
 
 export default Keg;

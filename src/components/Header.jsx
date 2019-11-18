@@ -4,7 +4,7 @@ import wallpaper from '../assets/images/wallpaper.jpg';
 // import styled from 'styled-components';
 
 const fullHeaderStyling = {
-  borderBottom: '20px double #8da686',
+  borderBottom: '30px double #879484',
   position: 'relative',
   display: 'inline block',
   width: '100%',
@@ -29,7 +29,7 @@ const headerWallpaperStyling = {
 };
 
 const link1Styling = {
-  color: '#c9be83',
+  color: '#c9ba32',
   fontSize: '25px',
   fontWeight: 'bold',
   position: 'relative',

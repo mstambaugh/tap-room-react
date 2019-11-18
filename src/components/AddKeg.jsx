@@ -31,6 +31,7 @@ function AddKeg() {
         <input
           type='text'
           placeholder='ABV' />
+        
         <button type='submit'>Add Keg to the TapList</button>
       </form>
     </div>
