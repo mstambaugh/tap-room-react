@@ -13,19 +13,19 @@ function AddKeg(props) {
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({ name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4() });
+    props.onNewKegCreation({ name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4()});
     _name.value = '';
     _brand.value = '';
     _location.value = '';
     _variety.value = '';
     _price.value = '';
     _abv.value = '';
-    _pintsLeft.value = 126;
+    _pintsLeft.value = '';
   }
   return (
     <div>
+      <h2>Add a new keg to the Taplist?</h2>
       <form onSubmit={handleNewKegSubmission}>
-        <h2>Add a new keg to the Taplist?</h2>
         <input
           type='text'
           id='name'

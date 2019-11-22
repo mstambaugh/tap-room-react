@@ -21,12 +21,13 @@ class App extends React.Component {
   }
   // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
 
-  handleAddingNewKegToTapList(newKeg){
+  handleAddingNewKegToTapList(addKeg){
     var newMasterTapList = this.state.masterTapList.slice();
     // addKeg.formattedPintsLeft = (addKeg.pintsLeft).fromNow(true);
-    newMasterTapList.push(newKeg);
+    newMasterTapList.push(addKeg);
     this.setState({ masterTapList: newMasterTapList });
   }
+
   componentWillMount() {
     console.log('componentWillMount');
   }
@@ -53,7 +54,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/employeehome' component={EmployeeHome} />
-          <Route path='/taplist' render={() => <TapList tapList={this.state.masterTaplist} />} />
+          <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
           <Route path='/addKeg' render={() => <AddKeg onAddKeg={this.handleAddingNewKegToTapList} />} />
         </Switch>
       </div>

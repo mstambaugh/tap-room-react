@@ -1,37 +1,39 @@
-// import React from 'react';
-// import AddKeg from './AddKeg';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import AddKeg from './AddKeg';
+import PropTypes from 'prop-types';
+import EmployeeHome from './EmployeeHome'
 
-// class AddKegControl extends React.Component {
+class AddKegControl extends React.Component {
 
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       formVisibleOnPage: true
-//     };
-//     // this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
-//   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      formVisibleOnPage: false
+    };
+    this.handleEmployeeHome = this.handleEmployeeHome.bind(this);
+  }
 
-//   // handleTroubleshootingConfirmation() {
-//   //   this.setState({ formVisibleOnPage: true });
-//   // }
+  handleEmployeeHome() {
+    this.setState({ formVisibleOnPage: true });
+  }
 
-//   render() {
-//     // if (this.state.formVisibleOnPage) {
-//     //   currentlyVisibleContent = <AddKeg onNewKegCreation={this.props.onNewKegCreation} />;
-//     // } else {
-//     //   currentlyVisibleContent = <EmployeeHome employeeHome={this.} />;
-//     // }
-//     return (
-//       <div>
-//         {currentlyVisibleContent}
-//       </div>
-//     );
-//   }
-// }
+  render() {
+    let currentlyVisibleContent = null;
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleContent = <AddKeg onNewKegCreation={this.props.onNewKegCreation} />;
+    } else {
+      currentlyVisibleContent = <EmployeeHome employeeHome={this.handleEmployeeHome} />;
+    }
+    return (
+      <div>
+        {currentlyVisibleContent}
+      </div>
+    );
+  }
+}
 
-// AddKegControl.propTypes = {
-//   onAddKegCreation: PropTypes.func
-// };
+AddKegControl.propTypes = {
+  onAddKegCreation: PropTypes.func
+};
 
-// export default AddKegControl;
+export default AddKegControl;
