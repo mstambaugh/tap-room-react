@@ -1,7 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-
+// import { v4 } from 'uuid';
+ 
 
 const QuoteStyles = {
   color: '#8da686',
@@ -29,47 +30,49 @@ const TapListStyles = {
   fontFamily: 'Arial',
 
 };
-var masterKegList = [
-  {
-    name: 'Two Hearted Ale',
-    brand: 'Bell\'s Brewery',
-    location: 'Kalamazoo, Michigan',
-    variety: 'American IPA',
-    price: '4.50',
-    abv: '7.0%',
-    pintsleft: '46'
-  },
-  {
-    name: 'Porter',
-    brand: 'Founders Brewing Co.',
-    location: 'Grand Rapids, Michigan',
-    variety: 'Robust Porter',
-    price: '5.00',
-    abv: '6.5%',
-    pintsleft: '121'
-  }
-];
+// var masterKegList = [
+//   {
+//     name: 'Two Hearted Ale',
+//     brand: 'Bell\'s Brewery',
+//     location: 'Kalamazoo, Michigan',
+//     variety: 'American IPA',
+//     price: '4.50',
+//     abv: '7.0%',
+//     pintsleft: '46'
+//   },
+//   {
+//     name: 'Porter',
+//     brand: 'Founders Brewing Co.',
+//     location: 'Grand Rapids, Michigan',
+//     variety: 'Robust Porter',
+//     price: '5.00',
+//     abv: '6.5%',
+//     pintsleft: '121'
+//   }
+// ];
 
 function TapList(props) {
   return (
     <div>
       <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
       <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
-      <h2 style={TapListStyles}>
-        
-        {props.tapList.map((keg) =>
-          <Keg name={keg.name}
-            brand={keg.brand}
-            location={keg.location}
-            variety={keg.variety}
-            price={keg.price}
-            abv={keg.abv}
-            pintsLeft={keg.pintsleft}
-            key={keg.id} />
-        )}
-      </h2>
+      <h2 style={TapListStyles}></h2>
+      
+      {props.tapList.map((keg, index) =>
+        <Keg name={keg.name}
+          brand={keg.brand}
+          location={keg.location}
+          variety={keg.variety}
+          price={keg.price}
+          abv={keg.abv}
+          pintsLeft={keg.pintsleft}
+          key={index} />
+      )}
     </div>
   );
 }
+TapList.propTypes = {
+  tapList: PropTypes.array
+};
 export default TapList;
 // export {masterKegList};

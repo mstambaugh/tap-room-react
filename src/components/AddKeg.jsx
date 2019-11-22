@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Keg from './Keg';
 import { v4 } from 'uuid';
 
 function AddKeg(props) {
