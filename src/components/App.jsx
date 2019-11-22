@@ -9,19 +9,37 @@ const pageBackground = {
   backgroundColor: '#fce7d9',
 };
 
+class App extends React.Component {
 
-function App() {
-  return (
-    <div style={pageBackground}>
-      <Header />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/employeehome' component={EmployeeHome} />
-        <Route path= '/taplist' component={TapList} />
-      </Switch>
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterTapList: []
+    };
+    this.handleAddingNewKegToTapList = this.handleAddingNewKegToTapList.bind(this)
+  }
+  // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
+  
+  handleAddingNewKegToTapList(newKeg){
+    var newMasterTapList = this.state.masterTapList.slice();
+    newKeg.formattedPintsLeft = (newKeg.pintsLeft).fromNow(true);
+    newMasterKegList.push(newKeg);
+    this.setState({ masterTapList: newMasterTapList });
+  }
 
-    </div>
-  );
+    render() {
+      return (
+        <div style={pageBackground}>
+          <Header />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/employeehome' component={EmployeeHome} />
+            <Route path='/taplist' render={() =><TapList tapList={this.state.masterTaplist} />} />
+            <Route path='/newKeg' render={() => <NewKeg onNewKegAdd={this.handleAddingNewKegToTapList} />} />
+          </Switch>
+        </div>
+      );
+    }
 }
 
 export default App;
