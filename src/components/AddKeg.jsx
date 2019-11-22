@@ -14,45 +14,63 @@ function AddKeg(props) {
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({ name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, id: v4() });
-    _names.value = '';
+    props.onNewKegCreation({ name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4() });
+    _name.value = '';
+    _brand.value = '';
     _location.value = '';
-    _issue.value = '';
+    _variety.value = '';
+    _price.value = '';
+    _abv.value = '';
+    _pintsLeft.value = 126;
   }
   return (
     <div>
-      <div>
-        <h2>I've lost my equilibrium, my car keys, and my pride.</h2>
-        <h3>~~~Tom Waits</h3>
-        <hr />
-      </div>
-      <form>
-        <h2>Add a new keg to the Taplist</h2>
+      <form onSubmit={handleNewKegSubmission}>
+        <h2>Add a new keg to the Taplist?</h2>
         <input
           type='text'
           id='name'
-          placeholder='Name' />
+          placeholder='Name' 
+          ref={(input) => { _name = input; }} />
+        <input
+          type='text'
+          id='brand'
+          placeholder='Brewery' 
+          ref={(input) => { _brand = input; }}/>
         <input
           type='text'
           id='location'
-          placeholder='Brewer location' />
+          placeholder='Brewery location' 
+          ref={(input) => { _location = input; }}/>
         <input
           type='text'
-          placeholder='Brewer' />
+          id='variety'
+          placeholder='Beer variety' 
+          ref={(input) => { _variety = input; }}/>
         <input
           type='text'
-          placeholder='Beer variety' />
+          id='price'
+          placeholder='Price per pint'
+          ref={(input) => { _price = input; }} />
         <input
           type='text'
-          placeholder='Price per Pint' />
+          id='abv'
+          placeholder='ABV'
+          ref={(input) => { _abv = input; }} />
         <input
           type='text'
-          placeholder='ABV' />
+          id='abpintsLeft'
+          placeholder='Pints in keg'
+          ref={(input) => { _pintsLeft = input; }} />
         
         <button type='submit'>Add Keg to the TapList</button>
       </form>
     </div>
   );
 }
+AddKeg.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
+
 export default AddKeg;
        
