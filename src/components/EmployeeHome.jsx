@@ -1,6 +1,6 @@
 import React from 'react';
-import Keg from './Keg';
-import {masterKegList} from './TapList';
+// import Keg from './Keg';
+// import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
@@ -45,13 +45,13 @@ const TitleStyles2 = {
   borderBottom: '5px inset #81909c',
   fontSize: '40px'
 };
-const TapListStyles = {
-  margin: '30px',
-  paddingLeft: '50px',
-  paddingRight: '50px',
-  color: '#8da686',
-  backgroundColor: '#879484',
-};
+// const TapListStyles = {
+//   margin: '30px',
+//   paddingLeft: '50px',
+//   paddingRight: '50px',
+//   color: '#8da686',
+//   backgroundColor: '#879484',
+// };
 
 function EmployeeHome() {
   return (
@@ -61,23 +61,24 @@ function EmployeeHome() {
         <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
       </div>
       <h2 style={TitleStyles}>On Tap</h2>
-      <div style={TapListStyles}>
-        {masterKegList.map((keg, index) =>
+      {/* <div style={TapListStyles}>
+        {props.tapList.map((keg, index) =>
           <Keg name={keg.name}
             brand={keg.brand}
             location={keg.location}
             variety={keg.variety}
             price={keg.price}
             abv={keg.abv}
-            pintsleft={keg.pintsleft}
+            pintsLeft={keg.pintsleft}
             key={index} />
         )}
-         
-      </div>
+      </div> */}
       <h2 style={TitleStyles2}>Almost tapped Out!</h2>  
-      <Link to='/AddKeg' style={link3Styling}>Add a new Keg</Link> |
-      <Link to='/EditKeg' style={link3Styling}>Edit/Remove Kegs</Link>  
+      <Link to='/AddKeg' style={link3Styling}>Add a new Keg</Link> 
     </div>
   );
 }
+// TapList.propTypes = {
+//   tapList: PropTypes.array
+// };
 export default EmployeeHome; 
