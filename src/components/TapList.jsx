@@ -1,5 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
+import PropTypes from 'prop-types';
 
 
 const QuoteStyles = {
@@ -49,25 +50,26 @@ var masterKegList = [
   }
 ];
 
-function TapList() {
+function TapList(props) {
   return (
     <div>
       <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
       <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
       <h2 style={TapListStyles}>
-        {masterKegList.map((keg, index) =>
+        
+        {props.tapList.map((keg) =>
           <Keg name={keg.name}
             brand={keg.brand}
             location={keg.location}
             variety={keg.variety}
             price={keg.price}
             abv={keg.abv}
-            pintsavailable={keg.pintsleft}
-            key={index} />
+            pintsLeft={keg.pintsleft}
+            key={keg.id} />
         )}
       </h2>
     </div>
   );
 }
 export default TapList;
-export {masterKegList};
+// export {masterKegList};
