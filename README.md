@@ -7,7 +7,9 @@
 ## Description
 
 _ _
+## Component Structure 
 
+![this](./src/assets/images/componentstructure1.png)
 ## Setup/Installation Requirements
 
 * _ _
