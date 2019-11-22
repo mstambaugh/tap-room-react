@@ -27,6 +27,24 @@ class App extends React.Component {
     newMasterTapList.push(newKeg);
     this.setState({ masterTapList: newMasterTapList });
   }
+  componentWillMount() {
+    console.log('componentWillMount');
+  }
+
+  componentWillReceiveProps() {
+    console.log('componentWillReceiveProps');
+  }
+
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate');
+    return true;
+  }
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
+  }
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
 
   render() {
     return (

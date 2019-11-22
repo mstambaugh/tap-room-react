@@ -54,11 +54,11 @@ const TapListStyles = {
 function TapList(props) {
   return (
     <div>
-      <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
-      <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
-      <h2 style={TapListStyles}></h2>
+    <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
+    <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
+    <h2 style={TapListStyles}></h2>
       
-      {props.tapList.map((keg, index) =>
+      {props.tapList.map((keg) =>
         <Keg name={keg.name}
           brand={keg.brand}
           location={keg.location}
@@ -66,7 +66,7 @@ function TapList(props) {
           price={keg.price}
           abv={keg.abv}
           pintsLeft={keg.pintsleft}
-          key={index} />
+          key={keg.id} />
       )}
     </div>
   );
