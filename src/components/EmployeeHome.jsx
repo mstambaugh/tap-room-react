@@ -52,7 +52,9 @@ const TitleStyles2 = {
 //   color: '#8da686',
 //   backgroundColor: '#879484',
 // };
+// 
 
+// add verification? Ask if you are rly an employee? Add edit keg, import taplist to employeehome, add buttons to sell/buy pints. 
 function EmployeeHome(props) {
   return (
     <div>
@@ -61,7 +63,7 @@ function EmployeeHome(props) {
         <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
       </div>
       <div>
-        <p>Have you gone through all the steps on the Learn How to Program debugging lesson?</p>
+        <h2>Add a New Keg to the TapList?</h2>
         <button onClick={props.onHandleEmployeeHome}>Yes</button>
       </div>
       <h2 style={TitleStyles}>On Tap</h2>
