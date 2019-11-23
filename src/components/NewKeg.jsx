@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
-function AddKeg(props) {
+function NewKeg(props) {
   let _name = null;
   let _brand = null;
   let _location = null;
@@ -13,7 +13,7 @@ function AddKeg(props) {
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({ name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4()});
+    props.onNewKegCreation({name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4()});
     _name.value = '';
     _brand.value = '';
     _location.value = '';
@@ -58,7 +58,7 @@ function AddKeg(props) {
           ref={(input) => { _abv = input; }} />
         <input
           type='text'
-          id='abpintsLeft'
+          id='pintsLeft'
           placeholder='Pints in keg'
           ref={(input) => { _pintsLeft = input; }} />
         
@@ -67,9 +67,9 @@ function AddKeg(props) {
     </div>
   );
 }
-AddKeg.propTypes = {
+NewKeg.propTypes = {
   onNewKegCreation: PropTypes.func
 };
 
-export default AddKeg;
+export default NewKeg;
        

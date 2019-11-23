@@ -1,9 +1,9 @@
 import React from 'react';
-import AddKeg from './AddKeg';
+import NewKeg from './NewKeg';
 import PropTypes from 'prop-types';
-import EmployeeHome from './EmployeeHome'
+import EmployeeHome from './EmployeeHome';
 
-class AddKegControl extends React.Component {
+class NewKegControl extends React.Component {
 
   constructor(props) {
     super(props);
@@ -13,16 +13,16 @@ class AddKegControl extends React.Component {
     this.handleEmployeeHome = this.handleEmployeeHome.bind(this);
   }
 
-  handleEmployeeHome() {
+  onhandleEmployeeHome() {
     this.setState({ formVisibleOnPage: true });
   }
 
   render() {
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleContent = <AddKeg onNewKegCreation={this.props.onNewKegCreation} />;
+      currentlyVisibleContent = <NewKeg onNewKegCreation={this.props.onNewKegCreation} />;
     } else {
-      currentlyVisibleContent = <EmployeeHome employeeHome={this.handleEmployeeHome} />;
+      currentlyVisibleContent = <EmployeeHome onHandleEmployeeHome={this.handleEmployeeHome} />;
     }
     return (
       <div>
@@ -32,8 +32,8 @@ class AddKegControl extends React.Component {
   }
 }
 
-AddKegControl.propTypes = {
-  onAddKegCreation: PropTypes.func
+NewKegControl.propTypes = {
+  onNewKegCreation: PropTypes.func
 };
 
-export default AddKegControl;
+export default NewKegControl;

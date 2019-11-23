@@ -4,7 +4,7 @@ import Home from './Home';
 import TapList from './TapList';
 import EmployeeHome from './EmployeeHome';
 import { Switch, Route } from 'react-router-dom';
-import AddKeg from './AddKeg';
+import NewKeg from './NewKeg';
 
 const pageBackground = {
   backgroundColor: '#fce7d9',
@@ -21,10 +21,10 @@ class App extends React.Component {
   }
   // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
 
-  handleAddingNewKegToTapList(addKeg){
+  handleAddingNewKegToTapList(newKeg){
     var newMasterTapList = this.state.masterTapList.slice();
     // addKeg.formattedPintsLeft = (addKeg.pintsLeft).fromNow(true);
-    newMasterTapList.push(addKeg);
+    newMasterTapList.push(newKeg);
     this.setState({ masterTapList: newMasterTapList });
   }
 
@@ -55,7 +55,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/employeehome' component={EmployeeHome} />
           <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
-          <Route path='/addKeg' render={() => <AddKeg onAddKeg={this.handleAddingNewKegToTapList} />} />
+          <Route path='/newkeg' render={() => <NewKeg onNewKegCreation={this.handleAddingNewKegToTapList} />} />
         </Switch>
       </div>
     );

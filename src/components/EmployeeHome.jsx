@@ -1,6 +1,6 @@
 import React from 'react';
 // import Keg from './Keg';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
@@ -53,32 +53,25 @@ const TitleStyles2 = {
 //   backgroundColor: '#879484',
 // };
 
-function EmployeeHome() {
+function EmployeeHome(props) {
   return (
     <div>
       <div>
         <h3 style={QuoteStyles}>A gentleman is someone who can play the accordion, but doesn't.</h3>
         <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
       </div>
+      <div>
+        <p>Have you gone through all the steps on the Learn How to Program debugging lesson?</p>
+        <button onClick={props.onHandleEmployeeHome}>Yes</button>
+      </div>
       <h2 style={TitleStyles}>On Tap</h2>
-      {/* <div style={TapListStyles}>
-        {props.tapList.map((keg, index) =>
-          <Keg name={keg.name}
-            brand={keg.brand}
-            location={keg.location}
-            variety={keg.variety}
-            price={keg.price}
-            abv={keg.abv}
-            pintsLeft={keg.pintsleft}
-            key={index} />
-        )}
-      </div> */}
       <h2 style={TitleStyles2}>Almost tapped Out!</h2>  
+
       <Link to='/AddKeg' style={link3Styling}>Add a new Keg</Link> 
     </div>
   );
 }
-// TapList.propTypes = {
-//   tapList: PropTypes.array
-// };
+EmployeeHome.propTypes = {
+  onHandleEmployeeHome: PropTypes.func
+};
 export default EmployeeHome; 

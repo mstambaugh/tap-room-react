@@ -23,7 +23,7 @@ function Keg(props) {
       </div>
       <h2 style={TapListTextStyles}>{props.name} ({props.variety}),<em>{props.abv}</em></h2>
       <h3 style={TapListTextStyles}>{props.brand} of {props.location}</h3>
-      <h3 style={TapListTextStyles}>${props.price}: {props.pintsleft}</h3>
+      <h3 style={TapListTextStyles}>${props.price}: {props.pintsLeft}</h3>
       <div style={TapListBreakStyles2}>
       </div>
     </div>
@@ -36,7 +36,7 @@ Keg.propTypes = {
   variety: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
-  pintsleft: PropTypes.string.isRequired
+  pintsLeft: PropTypes.string.isRequired
 };
 
 export default Keg;

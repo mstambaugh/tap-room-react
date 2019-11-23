@@ -20,7 +20,8 @@ const TomWaitsStyles = {
   paddingRight: '50px',
   fontSize: '30px'
 };
-const TapListStyles = {
+
+const TapListBackgroundStyles = {
   backgroundColor: '#879484',
   color: '#fce7d9',
   borderLeft: '15px double #c9ba32',
@@ -28,7 +29,6 @@ const TapListStyles = {
   margin: '50px',
   fontSize: '25px',
   fontFamily: 'Arial',
-
 };
 // var masterKegList = [
 //   {
@@ -56,8 +56,8 @@ function TapList(props) {
     <div>
       <h3 style={QuoteStyles}>I don't have a drinking problem 'Cept when I can't get a drink.</h3>
       <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
-      <h2 style={TapListStyles}></h2>
-      <div>
+      <div style={TapListBackgroundStyles}>
+        <h2 className='card'></h2>
         {props.tapList.map((keg) =>
           <Keg name={keg.name}
             brand={keg.brand}
@@ -65,7 +65,7 @@ function TapList(props) {
             variety={keg.variety}
             price={keg.price}
             abv={keg.abv}
-            pintsLeft={keg.pintsleft}
+            pintsLeft={keg.pintsLeft}
             key={keg.id} />
         )}
       </div>
@@ -75,4 +75,5 @@ function TapList(props) {
 TapList.propTypes = {
   tapList: PropTypes.array
 };
+
 export default TapList;
