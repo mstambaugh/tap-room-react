@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from './Header';
 import Home from './Home';
-import TapList from './TapList';
+// import TapList from './TapList';
 import EmployeeHome from './EmployeeHome';
 import { Switch, Route } from 'react-router-dom';
-import NewKeg from './NewKeg';
+// import NewKeg from './NewKeg';
+import EmployeeControl from './EmployeeControl';
 
 const pageBackground = {
   backgroundColor: '#fce7d9',
@@ -15,9 +16,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: []
+      masterTapList: [],
+      employee: false
+      
     };
+    // this.handleAccessingEmployeeHome = this.handleAccessingEmployeeHome.bind(this);
     this.handleAddingNewKegToTapList = this.handleAddingNewKegToTapList.bind(this);
+
   }
   // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
 
@@ -27,6 +32,14 @@ class App extends React.Component {
     newMasterTapList.push(newKeg);
     this.setState({ masterTapList: newMasterTapList });
   }
+  handleAccessingEmployeeHome(employee){
+    this.setState({employee})
+
+  }
+  // handleSellingPintFromKeg(props){
+
+  //   var 
+  // }
 
   componentWillMount() {
     console.log('componentWillMount');
@@ -53,9 +66,9 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/employeehome' component={EmployeeHome} />
-          <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
-          <Route path='/newkeg' render={() => <NewKeg onNewKegCreation={this.handleAddingNewKegToTapList} />} />
+          <Route path='/employeehome' render={() => <EmployeeHome onHandleEmployeeHome={this.handleEmployeeHome} />} />
+          {/* <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
+          <Route path='/newkeg' render={() => <NewKeg onNewKegCreation={this.handleAddingNewKegToTapList} />} /> */}
         </Switch>
       </div>
     );

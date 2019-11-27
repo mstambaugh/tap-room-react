@@ -1,8 +1,8 @@
 import React from 'react';
-// import Keg from './Keg';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 // import TapList from './TapList';
+// import Keg from './Keg';
 
 
 const QuoteCardStyles = {
@@ -57,13 +57,13 @@ function EmployeeHome(props) {
             <h3>A gentleman is someone who can play the accordion, but doesn't.</h3>
             <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
           </div>
+          <div><button onClick={props.onHandleEmployeeHome}>Yes</button></div>
           <div className='card' style={CardStyles}>
             <h2>Add a New Keg to the TapList?</h2>
-            <button onClick={props.onHandleEmployeeHome}>Yes</button>
             <h2 style={TitleStyles}>On Tap</h2>
-            <h2 className='card'></h2>
-
-            <h2 style={TitleStyles2}>Almost tapped Out!</h2>  
+            <h2 className='card'></h2> 
+            {/* taplist */}
+            <h2> style={TitleStyles2}>Almost tapped Out!</h2>  
             <ul>
               <li style={link3Styling}><Link to='/NewKeg' style={link3Styling}>AddKeg</Link></li> 
             </ul>
