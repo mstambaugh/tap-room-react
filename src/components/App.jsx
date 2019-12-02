@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Home from './Home';
 import TapList from './TapList';
-import EmployeeHome from './EmployeeHome';
+import EmployeeVerification from './EmployeeVerification';
 import { Switch, Route } from 'react-router-dom';
 import NewKeg from './NewKeg';
 
@@ -53,7 +53,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/employeehome' component={EmployeeHome} />
+          {/* <Route path='/employeeverification' render={() => <EmployeeVerification onNewKegCreation={this.handleAddingNewKegToTapList} />} /> */}
           <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
           <Route path='/newkeg' render={() => <NewKeg onNewKegCreation={this.handleAddingNewKegToTapList} />} />
         </Switch>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+// import Moment from 'moment';
 
 function NewKeg(props) {
   let _name = null;
@@ -11,7 +12,7 @@ function NewKeg(props) {
   let _abv = null;
   let _pintsLeft = null;
 
-  function handleNewKegSubmission(event) {
+  function handleAddingNewKegToTapList(event) {
     event.preventDefault();
     props.onNewKegCreation({name: _name.value, brand: _brand.value, location: _location.value, variety: _variety.value, price: _price.value, abv: _abv.value, pintsLeft: _pintsLeft.value, id: v4()});
     _name.value = '';
@@ -25,7 +26,7 @@ function NewKeg(props) {
   return (
     <div>
       <h2>Add a new keg to the Taplist?</h2>
-      <form onSubmit={handleNewKegSubmission}>
+      <form onSubmit={handleAddingNewKegToTapList}>
         <input
           type='text'
           id='name'

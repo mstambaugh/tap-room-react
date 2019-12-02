@@ -1,7 +1,7 @@
 import React from 'react';
 import NewKeg from './NewKeg';
 import PropTypes from 'prop-types';
-import EmployeeHome from './EmployeeHome';
+import EmployeeVerification from './EmployeeVerification';
 
 class NewKegControl extends React.Component {
 
@@ -20,9 +20,10 @@ class NewKegControl extends React.Component {
   render() {
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleContent = <EmployeeHome onEmployeeVerification={this.props.handleEmployeeVerification} />;
-    } else {
       currentlyVisibleContent = <NewKeg onNewKegCreation={this.props.onNewKegCreation} />;
+    } else {
+      currentlyVisibleContent = <EmployeeVerification onEmployeeVerification={this.handleEmployeeVerification} />;
+      
     }
     return (
       <div>

@@ -1,8 +1,6 @@
 import React from 'react';
 // import Keg from './Keg';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-import EmployeeHome from './EmployeeHome';
 // import TapList from './TapList';
 
 
@@ -49,7 +47,7 @@ const CardStyles = {
 
 
 // add verification? Ask if you are rly an employee? Add edit keg, import taplist to employeehome, add buttons to sell/buy pints. 
-function EmployeeHome(props) {
+function EmployeeVerification(props) {
   return (
     <div>
       <div className='row'>
@@ -59,14 +57,12 @@ function EmployeeHome(props) {
             <h4 style={TomWaitsStyles}>~~~Tom Waits</h4>
           </div>
           <div className='card' style={CardStyles}>
-            <h2>Add a New Keg to the TapList?</h2>
-            <form>
-              <button onClick={props.onHandleEmployeeVerification}>Yes</button>
-            </form>
+            <h2>Click to verify you are an Employee and add a new keg to the taplist</h2>
+            <button onClick={props.onEmployeeVerification}>Yes</button>
             <h2 style={TitleStyles}>On Tap</h2>
             <h2 className='card'></h2>
 
-            <h2 style={TitleStyles2}>Almost tapped Out!</h2>  
+            <h2 style={TitleStyles2}>Almost tapped Out!</h2>
             <ul>
             </ul>
           </div>
@@ -75,8 +71,8 @@ function EmployeeHome(props) {
     </div>
   );
 }
-EmployeeHome.propTypes = {
-  onHandleEmployeeVerification: PropTypes.func
+EmployeeVerification.propTypes = {
+  onEmployeeVerification: PropTypes.func
 };
 // TapList.propTypes = {
 //   tapList: PropTypes.array
@@ -91,4 +87,4 @@ EmployeeHome.propTypes = {
 //   pintsLeft: PropTypes.string.isRequired
 // };
 
-export default EmployeeHome; 
+export default EmployeeVerification; 
