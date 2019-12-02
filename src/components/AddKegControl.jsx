@@ -10,19 +10,19 @@ class NewKegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleEmployeeHome = this.handleEmployeeHome.bind(this);
+    this.handleEmployeeVerification = this.handleEmployeeVerification.bind(this);
   }
 
-  onhandleEmployeeHome() {
+  handleEmployeeVerification() {
     this.setState({ formVisibleOnPage: true });
   }
 
   render() {
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleContent = <NewKeg onNewKegCreation={this.props.onNewKegCreation} />;
+      currentlyVisibleContent = <EmployeeHome onEmployeeVerification={this.props.handleEmployeeVerification} />;
     } else {
-      currentlyVisibleContent = <EmployeeHome onHandleEmployeeHome={this.handleEmployeeHome} />;
+      currentlyVisibleContent = <NewKeg onNewKegCreation={this.props.onNewKegCreation} />;
     }
     return (
       <div>

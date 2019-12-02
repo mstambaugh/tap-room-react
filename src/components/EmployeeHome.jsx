@@ -1,7 +1,8 @@
 import React from 'react';
 // import Keg from './Keg';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import EmployeeHome from './EmployeeHome';
 // import TapList from './TapList';
 
 
@@ -59,13 +60,14 @@ function EmployeeHome(props) {
           </div>
           <div className='card' style={CardStyles}>
             <h2>Add a New Keg to the TapList?</h2>
-            <button onClick={props.onHandleEmployeeHome}>Yes</button>
+            <form>
+              <button onClick={props.onHandleEmployeeVerification}>Yes</button>
+            </form>
             <h2 style={TitleStyles}>On Tap</h2>
             <h2 className='card'></h2>
 
             <h2 style={TitleStyles2}>Almost tapped Out!</h2>  
             <ul>
-              <li style={link3Styling}><Link to='/NewKeg' style={link3Styling}>AddKeg</Link></li> 
             </ul>
           </div>
         </div>
@@ -74,7 +76,7 @@ function EmployeeHome(props) {
   );
 }
 EmployeeHome.propTypes = {
-  onHandleEmployeeHome: PropTypes.func
+  onHandleEmployeeVerification: PropTypes.func
 };
 // TapList.propTypes = {
 //   tapList: PropTypes.array
