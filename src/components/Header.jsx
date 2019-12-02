@@ -76,7 +76,7 @@ function Header() {
       <div>
         <Link to='/' style={link1Styling}>Home</Link>
         <Link to='/TapList' style={link2Styling}>Beers on Tap</Link>  
-        <Link to='/NewKeg' style={link3Styling}>AddKeg</Link>
+        <Link to='/NewKeg' style={link3Styling}>Employee Menu</Link>
       </div>
     </div>
   );

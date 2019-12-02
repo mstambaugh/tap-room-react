@@ -2,9 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Home from './Home';
 import TapList from './TapList';
-import EmployeeVerification from './EmployeeVerification';
 import { Switch, Route } from 'react-router-dom';
-import NewKeg from './NewKeg';
 import AddKegControl from './AddKegControl';
 
 const pageBackground = {
@@ -19,6 +17,7 @@ class App extends React.Component {
       masterTapList: []
     };
     this.handleAddingNewKegToTapList = this.handleAddingNewKegToTapList.bind(this);
+    this.onPintSale = this.onPintSale.bind(this);
   }
   // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
 
@@ -27,6 +26,12 @@ class App extends React.Component {
     // addKeg.formattedPintsLeft = (addKeg.pintsLeft).fromNow(true);
     newMasterTapList.push(newKeg);
     this.setState({ masterTapList: newMasterTapList });
+  }
+  onPintSale(Keg){
+    var newPintsLeft = this.state.pintsLeft;
+    newPintsLeft -=1
+    newPintsLeft.push(Keg);
+    this.setState({ pintsLeft: newPintsLeft});
   }
 
   componentWillMount() {

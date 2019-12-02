@@ -21,7 +21,7 @@ function NewKeg(props) {
     _variety.value = '';
     _price.value = '';
     _abv.value = '';
-    _pintsLeft.value = '';
+    _pintsLeft.value = 0;
   }
   return (
     <div>
@@ -58,7 +58,7 @@ function NewKeg(props) {
           placeholder='ABV'
           ref={(input) => { _abv = input; }} />
         <input
-          type='text'
+          type='int'
           id='pintsLeft'
           placeholder='Pints in keg'
           ref={(input) => { _pintsLeft = input; }} />
