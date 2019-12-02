@@ -5,6 +5,7 @@ import TapList from './TapList';
 import EmployeeVerification from './EmployeeVerification';
 import { Switch, Route } from 'react-router-dom';
 import NewKeg from './NewKeg';
+import AddKegControl from './AddKegControl';
 
 const pageBackground = {
   backgroundColor: '#fce7d9',
@@ -55,7 +56,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           {/* <Route path='/employeeverification' render={() => <EmployeeVerification onNewKegCreation={this.handleAddingNewKegToTapList} />} /> */}
           <Route path='/taplist' render={() => <TapList tapList={this.state.masterTapList} />} />
-          <Route path='/newkeg' render={() => <NewKeg onNewKegCreation={this.handleAddingNewKegToTapList} />} />
+          <Route path='/newkeg' render={() => <AddKegControl onNewKegCreation={this.handleAddingNewKegToTapList} />} />
         </Switch>
       </div>
     );
