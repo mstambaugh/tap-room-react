@@ -3,6 +3,7 @@ import NewKeg from './NewKeg';
 import PropTypes from 'prop-types';
 import EmployeeVerification from './EmployeeVerification';
 
+
 class NewKegControl extends React.Component {
 
   constructor(props) {

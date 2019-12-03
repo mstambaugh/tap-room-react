@@ -17,21 +17,20 @@ class App extends React.Component {
       masterTapList: []
     };
     this.handleAddingNewKegToTapList = this.handleAddingNewKegToTapList.bind(this);
-    this.onPintSale = this.onPintSale.bind(this);
+    this.handlePintSale = this.handlePintSale.bind(this);
   }
-  // need method for updating pints left in keg, along with mount and unmount stuff set to timers for autoupdating.
+ 
 
   handleAddingNewKegToTapList(newKeg){
     var newMasterTapList = this.state.masterTapList.slice();
-    // addKeg.formattedPintsLeft = (addKeg.pintsLeft).fromNow(true);
     newMasterTapList.push(newKeg);
     this.setState({ masterTapList: newMasterTapList });
   }
-  onPintSale(Keg){
-    var newPintsLeft = this.state.pintsLeft;
-    newPintsLeft -=1
-    newPintsLeft.push(Keg);
-    this.setState({ pintsLeft: newPintsLeft});
+  handlePintSale(index) {
+    var newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList[index].pintsLeft --;
+    newMasterTapList.push();
+    this.setState({ masterTapList: newMasterTapList });
   }
 
   componentWillMount() {

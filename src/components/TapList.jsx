@@ -1,7 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-// import { v4 } from 'uuid';
  
 
 const QuoteStyles = {
@@ -30,7 +29,7 @@ const TapListBackgroundStyles = {
   fontSize: '25px',
   fontFamily: 'Arial',
 };
-// var masterKegList = [
+// var masterTapList = [
 //   {
 //     name: 'Two Hearted Ale',
 //     brand: 'Bell\'s Brewery',
@@ -73,7 +72,8 @@ function TapList(props) {
   );
 }
 TapList.propTypes = {
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  handlePintSale: PropTypes.func
 };
 
 export default TapList;

@@ -17,6 +17,14 @@ const TapListTextStyles = {
   fontFamily: 'Arial',
  
 };
+const KegCardStyles = {
+  color: '#8da686',
+  backgroundColor: '#879484',
+  padding: '50px',
+  fontSize: '25px',
+  fontFamily: 'Arial',
+};
+
 
 function Keg(props) {
 
@@ -24,10 +32,12 @@ function Keg(props) {
     <div>
       <div style={TapListBreakStyles1}>
       </div>
-      <h2 style={TapListTextStyles}>{props.name} ({props.variety}),<em>{props.abv}</em></h2>
-      <h3 style={TapListTextStyles}>{props.brand} of {props.location}</h3>
-      <h3 style={TapListTextStyles}>${props.price}: {props.pintsLeft}</h3>
-      <button onClick={props.onPintSale}>Order a pint!</button>
+      <div className='card' style={KegCardStyles}>
+        <h2 style={TapListTextStyles}>{props.name} ({props.variety}),<em>{props.abv}</em></h2>
+        <h3 style={TapListTextStyles}>{props.brand} of {props.location}</h3>
+        <h3 style={TapListTextStyles}>${props.price}: {props.pintsLeft}</h3>
+        <button onClick={props.onPintSale}>Order a pint!</button>
+      </div>
       <div style={TapListBreakStyles2}>
       </div>
     </div>
@@ -40,10 +50,7 @@ Keg.propTypes = {
   variety: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
-  pintsLeft: PropTypes.int,
-  
-};
-Keg.propTypes = {
+  pintsLeft: PropTypes.number,
   onPintSale: PropTypes.func
 };
 
