@@ -27,6 +27,7 @@ const KegCardStyles = {
 
 
 function Keg(props) {
+  console.log(props);
 
   return (
     <div>

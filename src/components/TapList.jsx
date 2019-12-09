@@ -29,26 +29,26 @@ const TapListBackgroundStyles = {
   fontSize: '25px',
   fontFamily: 'Arial',
 };
-// var masterTapList = [
-//   {
-//     name: 'Two Hearted Ale',
-//     brand: 'Bell\'s Brewery',
-//     location: 'Kalamazoo, Michigan',
-//     variety: 'American IPA',
-//     price: '4.50',
-//     abv: '7.0%',
-//     pintsleft: '46'
-//   },
-//   {
-//     name: 'Porter',
-//     brand: 'Founders Brewing Co.',
-//     location: 'Grand Rapids, Michigan',
-//     variety: 'Robust Porter',
-//     price: '5.00',
-//     abv: '6.5%',
-//     pintsleft: '121'
-//   }
-// ];
+var masterTapList = [
+  {
+    name: 'Two Hearted Ale',
+    brand: 'Bell\'s Brewery',
+    location: 'Kalamazoo, Michigan',
+    variety: 'American IPA',
+    price: '4.50',
+    abv: '7.0%',
+    pintsleft: '46'
+  },
+  {
+    name: 'Porter',
+    brand: 'Founders Brewing Co.',
+    location: 'Grand Rapids, Michigan',
+    variety: 'Robust Porter',
+    price: '5.00',
+    abv: '6.5%',
+    pintsleft: '121'
+  }
+];
 
 function TapList(props) {
   return (
@@ -73,7 +73,7 @@ function TapList(props) {
 }
 TapList.propTypes = {
   tapList: PropTypes.array,
-  handlePintSale: PropTypes.func
+  onPintSale: PropTypes.func
 };
 
 export default TapList;
